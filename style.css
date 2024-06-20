@@ -15,6 +15,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    min-width: 100vw;
     margin: 0;
     background-image: url(img/bg.jpg);
     background-size: cover;
@@ -57,9 +58,15 @@ footer {
     font: normal bold 16px / 1 'boogaloo', sans-serif;
 }
 
-#go-left {
-    rotate: -180deg;
+.console-btn {
+    font-size: 32px;
+    border: 2px solid black;
+    height: 32px;
     width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
 }
 
 .hover:hover {
@@ -68,18 +75,21 @@ footer {
     transition: 100ms;
 }
 
-#go-right {
-    width: 32px;
-}
 
 #go-jump {
     rotate: -90deg;
-    width: 32px;
 }
 
 #go-throw {
     rotate: -45deg;
-    width: 32px;
+}
+
+.throw {
+    rotate: -45deg;
+}
+
+.jump {
+    rotate: -90deg;
 }
 
 .endscreen {
@@ -134,7 +144,7 @@ footer {
 }
 
 .end-btn {
-    position: relative;
+    position: absolute;
     width: 32px;
     padding: 8px 16px;
     background-color: #994409;
@@ -142,7 +152,6 @@ footer {
     border: 1px solid #f6bb60;
     border-radius: 16px;
     top: -95%;
-    transform: translate(-50%);
     transition: 200ms;
 }
 
@@ -156,11 +165,13 @@ footer {
 }
 
 #home {
-    left: 80%;
+    top: 10px;
+    right: 10px;
 }
 
 #restart {
-    left: 10%;
+    top: 10px;
+    left: 10px;
 }
 
 .menu {
@@ -293,14 +304,25 @@ h2 {
     display: none;
 }
 
+.only-desktop {
+    display: block;
+}
+
+.pstn-rltv {
+    position: relative;
+}
+
 #mobile-keyboard {
     align-items: center;
+    justify-content: center;
     gap: 240px;
 }
 
 .mobile-btn {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
 }
 
 table {
@@ -339,11 +361,37 @@ table {
     font-family: 'boogaloo', Arial, Helvetica, sans-serif;
 }
 
+.console {
+    position: absolute;
+    top: 25%;
+
+    height: 40vh;
+    background-color: rgb(153, 68, 9);
+    width: 8vw;
+    border-radius: 16px;
+}
+
+.left {
+    left: 25px
+}
+
+.right {
+    right: 25px
+}
+
 @media (max-width: 1024px) and (orientation: landscape) {
     #mobile-keyboard {
         display: flex;
     }
-  }
+
+    .only-mobile {
+        display: flex;
+    }
+
+    .only-desktop {
+        display: none;
+    }
+}
 
 
 @media only screen and (max-width: 500px) {
@@ -368,14 +416,14 @@ table {
     }
 
     canvas {
-        height: 70vh !important;
-        width: 70vw;
+        height: 64vh !important;
+        width: 56vw;
 
     }
 
     .responsive {
-        height: 70vh !important;
-        width: 70vw;
+        height: 64vh !important;
+        width: 56vw;
     }
 
 
@@ -393,7 +441,16 @@ table {
         display: none;
     }
 
-    .menu {
-        display: none;
+    .section-manage {
+        height: 40vh;
+        width: 32vw;
+    }
+
+    table {
+        font-size: 21px;
+
+        img {
+            width: 32px !important;
+        }
     }
 }

@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="style.css">
     <title>El Pollo Loco</title>
-    <script src="js/bg.sound.js"></script>
+
     <script src="models/drawable-object.class.js"></script>
     <script src="models/movable-object.class.js"></script>
 
@@ -39,16 +39,24 @@
 <body onload="initBody()">
     <div id="fullscreen">
         <h1>El Pollo Loco</h1>
+        <div id="mobile-keyboard" class="console left d-none">
 
+            <div class="mobile-btn">
+                <span class="hover console-btn" id="go-jump">></span>
+                <span class="hover console-btn" id="go-left"><</span>
+            </div>
+
+        </div>
         <div id="start" class="height responsive">
 
             <section id="manage" class="d-none overlay responsive">
-                <section class="section">
+                <section class="section section-manage">
                     <p onclick="closeManager()" class="close center">X</p>
                     <table>
                         <tr>
-                            <th><img src="img/forward.png"></th>
-                            <th>Right</th>
+                            <th><img class="only-desktop" src="img/space.png"><img class="only-mobile jump"
+                                    src="img/forward.png"></th>
+                            <th>Jump</th>
                         </tr>
                         <tr>
                             <td><img src="img/back.png"></td>
@@ -58,12 +66,16 @@
 
                     <table>
                         <tr>
-                            <th><img src="img/space.png"></th>
-                            <th>Jump</th>
+                            <td><img class="only-desktop" src="img/d.png"><img class="only-mobile throw"
+                                    src="img/forward.png">
+                            </td>
+                            <td>Throw</td>
+
                         </tr>
                         <tr>
-                            <td><img src="img/d.png"></td>
-                            <td>Throw</td>
+                            
+                            <th><img src="img/forward.png"></th>
+                            <th>Right</th>
                         </tr>
                     </table>
                 </section>
@@ -76,7 +88,7 @@
                         <h2>Impressum</h2>
                         <p>Angaben gemäß § 5 TMG</p>
                         <p>Rabia Ürkmez <br>
-                            E-Mail: 111rabiaurkmez@gmail.com <br>
+                            E-Mail: mail@rabia-uerkmez.de <br>
                         </p>
                         <p> <strong>Vertreten durch: </strong><br></p>
                         <p>Developer Akademie GmbH <br>
@@ -103,45 +115,55 @@
                             Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei
                             Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
                         <br>
-                        Website Impressum von <a href="https://www.impressum-generator.de">impressum-generator.de</a>
+                        Website Impressum von <a href="https://www.impressum-generator.de"
+                            target="_blank">impressum-generator.de</a>
                         <br>
                         Hintergrundbild von <a
-                            href="https://pixabay.com/de/users/nike159-4320960/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2042738">Nici
+                            href="https://pixabay.com/de/users/nike159-4320960/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2042738"
+                            target="_blank">Nici
                             Keil</a> auf <a
-                            href="https://pixabay.com/de//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2042738">Pixabay</a><br>
-                        <a href="https://www.flaticon.com/de/kostenlose-icons/vollbildschirm"
+                            href="https://pixabay.com/de//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2042738"
+                            target="_blank">Pixabay</a><br>
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/vollbildschirm" target="_blank"
                             title="vollbildschirm Icons">Vollbildschirm Icons erstellt von feen - Flaticon</a><br>
-                        <a href="https://www.flaticon.com/de/kostenlose-icons/ui" title="ui Icons">Ui Icons erstellt von
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/ui" target="_blank" title="ui Icons">Ui
+                            Icons erstellt von
                             Bharat Icons - Flaticon</a><br>
-                        <a href="https://www.flaticon.com/de/kostenlose-icons/vorwarts-taste"
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/vorwarts-taste" target="_blank"
                             title="vorwärts-taste Icons">Vorwärts-taste Icons erstellt von Stasy - Flaticon</a><br>
-                        <a href="https://www.flaticon.com/de/kostenlose-icons/tastaturbefehl"
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/tastaturbefehl" target="_blank"
                             title="tastaturbefehl Icons">Tastaturbefehl Icons erstellt von shohanur.rahman13 -
                             Flaticon</a><br>
-                        <a href="https://www.flaticon.com/de/kostenlose-icons/pfeil" title="pfeil Icons">Pfeil Icons
-                            erstellt von deemakdaksina - Flaticon</a><br>
-                        <a href="https://www.flaticon.com/de/kostenlose-icons/stumm" title="stumm Icons">Stumm Icons
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/stumm" target="_blank"
+                            title="stumm Icons">Stumm Icons
                             erstellt von Bharat Icons - Flaticon</a><br>
-                        <a href="https://www.flaticon.com/de/kostenlose-icons/klang" title="klang Icons">Klang Icons
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/klang" target="_blank"
+                            title="klang Icons">Klang Icons
                             erstellt von Bharat Icons - Flaticon</a><br>
-                        <a href="https://www.flaticon.com/de/kostenlose-icons/buch" title="buch Icons">Buch Icons
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/buch" target="_blank"
+                            title="buch Icons">Buch Icons
                             erstellt von Good Ware - Flaticon</a><br>
-                        <a href="https://www.flaticon.com/de/kostenlose-icons/die-info" title="die info Icons">Die info
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/die-info" target="_blank"
+                            title="die info Icons">Die info
                             Icons erstellt von deemakdaksina - Flaticon</a><br>
-                        <a href="https://www.flaticon.com/de/kostenlose-icons/neu-starten" title="neu starten Icons">Neu
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/neu-starten" target="_blank"
+                            title="neu starten Icons">Neu
                             starten Icons erstellt von Icon Hubs - Flaticon</a><br>
-                        <a href="https://www.flaticon.com/de/kostenlose-icons/zuhause" title="zuhause Icons">Zuhause
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/zuhause" target="_blank"
+                            title="zuhause Icons">Zuhause
                             Icons erstellt von Dave Gandy - Flaticon</a><br>
                     </div>
                 </section>
             </section>
+
+
 
             <img class="startscreen responsive" src="img/9_intro_outro_screens/start/startscreen_1.png">
             <button onclick="initGame()" class="play-btn">Play Game</button>
         </div>
 
 
-        <div id="game-over" class="height width responsive" style="display: none">
+        <div id="game-over" class="height width responsive pstn-rltv" style="display: none">
             <img class="endscreen responsive" src="img/9_intro_outro_screens/game_over/game over.png">
             <img onclick="restart()" id="restart" class="end-btn" src="img/restart.png">
             <img onclick="home()" id="home" class="end-btn" src="img/home.png">
@@ -149,7 +171,7 @@
 
 
 
-        <div id="you-lost" class="height width responsive" style="display: none">
+        <div id="you-lost" class="height width responsive pstn-rltv" style="display: none">
             <img class="endscreen responsive" src="img/9_intro_outro_screens/game_over/you lost.png">
             <img onclick="restart()" id="restart" class="end-btn" src="img/restart.png">
             <img onclick="home()" id="home" class="end-btn" src="img/home.png">
@@ -163,24 +185,19 @@
             <img onclick="policy()" id="gaming2" class="menu hover" src="img/info.png">
 
 
-            <div id="mobile-keyboard" class="d-none">
-                <div class="mobile-btn">
-                    <img class="hover" id="go-left" src="img/pfeilrund.png">
-                    <img class="hover" id="go-right" src="img/pfeilrund.png">
-                </div>
-
-
-                <div class="mobile-btn">
-                    <img class="hover" id="go-jump" src="img/pfeilrund.png">
-                    <img class="hover" id="go-throw" src="img/pfeilrund.png">
-                </div>
-            </div>
-
             <img onclick="fullscreen()" id="open-fullscreen" src="img/fullscreen.png" class="fullscreen hover">
             <img onclick="closefullscreen()" id="close-fullscreen" src="img/closescreen.png "
                 class="fullscreen hover d-none">
         </footer>
 
+        <div id="mobile-keyboard" class="console right d-none">
+
+            <div class="mobile-btn">
+                <span class="hover console-btn" id="go-throw">></span>
+                <span class="hover console-btn" id="go-right">></span>
+            </div>
+
+        </div>
 
     </div>
 
